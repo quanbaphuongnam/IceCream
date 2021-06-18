@@ -6,22 +6,11 @@ using System.Threading.Tasks;
 
 namespace IceCream.Areas.Admin.Controllers
 {
-    [Route("home")]
-    public class HomeController : Controller
+    public class HomeAdminController : Controller
     {
-        [Route("index")]
-        [Route("")]
-        [Route("~/")]
         public IActionResult Index()
         {
-
             return View();
-        }
-        [Route("cart")]
-        public IActionResult ViewCart()
-        {
-
-            return View("cart");
         }
     }
 }

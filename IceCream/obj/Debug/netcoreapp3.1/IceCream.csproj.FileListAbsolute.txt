@@ -106,3 +106,5 @@ C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.ge
 C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Footer.cshtml.g.cs
 C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Header.cshtml.g.cs
+C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Signin\Signin.cshtml.g.cs
+C:\Users\User\source\repos\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Account\Cart.cshtml.g.cs
