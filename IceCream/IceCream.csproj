@@ -15,7 +15,7 @@
     <Folder Include="Views\FAQ\" />
     <Folder Include="Views\Book\" />
     <Folder Include="Views\Signup\" />
-    <Folder Include="Views\Signin\" />
+    <Folder Include="wwwroot\Admin\" />
   </ItemGroup>
 
   <ItemGroup>
