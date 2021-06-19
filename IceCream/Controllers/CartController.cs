@@ -4,19 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IceCream.Areas.Admin.Controllers
+namespace IceCream.Controllers
 {
-    [Route("home")]
-    public class HomeController : Controller
+    [Route("cart")]
+    public class CartController : Controller
     {
-        [Route("index")]
+        [Route("cart")]
         [Route("")]
-        [Route("~/")]
         public IActionResult Index()
         {
-
             return View();
         }
-       
     }
 }

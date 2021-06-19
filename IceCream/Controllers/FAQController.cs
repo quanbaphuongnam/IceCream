@@ -4,19 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IceCream.Areas.Admin.Controllers
+namespace IceCream.Controllers
 {
-    [Route("home")]
-    public class HomeController : Controller
+    [Route("FAQ")]
+    public class FAQController : Controller
     {
-        [Route("index")]
+        [Route("FAQ")]
         [Route("")]
-        [Route("~/")]
         public IActionResult Index()
         {
-
-            return View();
+            return View("FAQ");
         }
-       
     }
 }

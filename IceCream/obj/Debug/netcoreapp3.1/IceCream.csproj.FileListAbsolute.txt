@@ -360,3 +360,6 @@ C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Ic
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.dll
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.pdb
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.genruntimeconfig.cache
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\FAQ\FAQ.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Recipe\Recipe.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Contact.cshtml.g.cs
