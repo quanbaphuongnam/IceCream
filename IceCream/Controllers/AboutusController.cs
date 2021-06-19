@@ -6,19 +6,14 @@ using System.Threading.Tasks;
 
 namespace IceCream.Controllers
 {
-    [Route("cart")]
-    public class CartController : Controller
+    [Route("aboutus")]
+    public class AboutusController : Controller
     {
+        [Route("aboutus")]
         [Route("cart")]
-        [Route("")]
         public IActionResult Index()
         {
-            return View("cart");
-        }
-        [Route("checkout")]
-        public IActionResult CheckOut()
-        {
-            return View("checkout");
+            return View("aboutus");
         }
     }
 }
