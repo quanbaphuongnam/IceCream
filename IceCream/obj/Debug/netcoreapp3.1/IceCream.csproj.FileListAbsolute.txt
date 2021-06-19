@@ -367,3 +367,4 @@ C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Ra
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Book\Book.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Cart\CheckOut.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Aboutus\Aboutus.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Recipe\RecipeDetail.cshtml.g.cs

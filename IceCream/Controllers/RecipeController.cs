@@ -16,5 +16,10 @@ namespace IceCream.Controllers
         {
             return View("recipe");
         }
+        [Route("recipedetail")]
+        public IActionResult RecipeDetail()
+        {
+            return View("recipedetail");
+        }
     }
 }
