@@ -10,11 +10,11 @@ namespace IceCream.Controllers
     public class BookController : Controller
     {
         
-        [Route("book")]
+        [Route("allbook")]
         [Route("")]
         public IActionResult Index()
         {
-            return View("book");
+            return View("allbook");
         }
         [Route("bookdetails")]
         public IActionResult BookDetails()
