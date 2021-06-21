@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IceCream.Areas.Admin.Controllers
+namespace IceCream.Controllers
 {
-    public class HomeAdminController : Controller
+    [Route("profile")]
+    public class ProfileController : Controller
     {
+        [Route("profile")]
+        [Route("")]
         public IActionResult Index()
         {
-            return View();
+            return View("profile");
         }
     }
 }
