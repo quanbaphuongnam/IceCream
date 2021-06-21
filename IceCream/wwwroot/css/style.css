@@ -4846,9 +4846,10 @@ i:before {
 /* Bakery Video Area css
 ============================================================================================ */
 .bakery_video_area {
-  background: url(../img/video/video-1.jpg) no-repeat scroll center center;
-  background-size: cover;
-  padding: 120px 0px;
+    background: url(../img/video/video-1.jpg) no-repeat scroll center center;
+    background-size: cover;
+    padding: 120px 0px;
+
 }
 
 .bakery_video_area .video_inner {

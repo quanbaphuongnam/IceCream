@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Signup\**" />
+    <Content Remove="Views\Signup\**" />
+    <EmbeddedResource Remove="Views\Signup\**" />
+    <None Remove="Views\Signup\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Services\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Signup\" />
     <Folder Include="wwwroot\Admin\" />
     <Folder Include="wwwroot\img\books\" />
     <Folder Include="wwwroot\img\NewFolder\" />
