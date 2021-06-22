@@ -16,9 +16,8 @@
     <Folder Include="Areas\Admin\Services\" />
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Models\" />
+    <Folder Include="Services\" />
     <Folder Include="wwwroot\Admin\" />
-    <Folder Include="wwwroot\img\books\" />
     <Folder Include="wwwroot\img\NewFolder\" />
   </ItemGroup>
 
