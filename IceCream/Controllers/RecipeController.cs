@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IceCream.Services;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,23 @@ namespace IceCream.Controllers
     [Route("recipe")]
     public class RecipeController : Controller
     {
+        private RecipeService recipeService;
+        private SavourService savourService;
+        private IWebHostEnvironment webHostEnvironment;
+
+
+        public RecipeController(SavourService _savourService, RecipeService _recipeService,IWebHostEnvironment _webHostEnvironment)
+        {
+            savourService = _savourService;
+            recipeService = _recipeService;
+        }
         [Route("recipe")]
         [Route("")]
    
         public IActionResult Index()
         {
+            ViewBag.savours = savourService.FindAllSavour();
+            ViewBag.recipes = recipeService.FindAllFormula();
             return View("recipe");
         }
         [Route("recipedetail")]

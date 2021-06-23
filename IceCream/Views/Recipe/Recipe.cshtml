@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IceCream.Models.BigModel.AllFormula
+
+@{
     ViewData["Title"] = "Recipe";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -7,7 +9,7 @@
     <div class="container">
         <div class="banner_text">
             <br /><br />
-                  <h3>All Recipe</h3>
+            <h3>All Recipe</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Recipe</a></li>
@@ -40,114 +42,23 @@
                     </div>
                 </div>
                 <div class="row product_item_inner">
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-1.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Mem</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8"  asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-2.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Free</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
+                    @foreach (var recipe in ViewBag.recipes)
+                    {
+                        <div class="col-lg-4 col-md-4 col-6">
+                            <div class="cake_feature_item">
+                                <div class="cake_img">
+                                    <img src="~/img/cake-feature/c-feature-1.jpg" alt="">
+                                </div>
+                                <div class="cake_text">
+                                    <h4>@recipe.ForCondition</h4>
+                                    <h3>@recipe.ForName</h3>
+                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-3.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Mem</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-4.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Free</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8"  asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-5.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Free</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-6.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Mem</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8"  asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-7.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Free</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-8.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Mem</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">Watch now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-6">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="~/img/cake-feature/c-feature-9.jpg" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>Free</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="custom-btn btn-8"  asp-controller="recipe" asp-action="recipedetail">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
+                    }
+
+
                 </div>
                 <div class="product_pagination">
                     <div class="left_btn">
@@ -182,24 +93,25 @@
                             <h3>Product Categories</h3>
                         </div>
                         <ul class="list_style">
-                            <li><a href="#">Cherry (17)</a></li>
-                            <li><a href="#">Chocolate (15)</a></li>
-                            <li><a href="#">Butterscotch (14)</a></li>
-                            <li><a href="#">Vanila (8)</a></li>
-                            <li><a href="#">Kiwi (11)</a></li>
+                            @foreach (var savour in ViewBag.savours)
+                            {
+                                <li><a href="#">@savour.SavName</a></li>
+                            }
+
+
                         </ul>
                     </aside>
-                    <aside class="left_sidebar p_price_widget">
-                        <div class="p_w_title">
-                            <h3>Filter By Price</h3>
-                        </div>
-                        <div class="filter_price">
-                            <div id="slider-range"></div>
-                            <label for="amount">Price range:</label>
-                            <input type="text" id="amount" readonly />
-                            <a href="#">Filter</a>
-                        </div>
-                    </aside>
+                    @*<aside class="left_sidebar p_price_widget">
+                            <div class="p_w_title">
+                                <h3>Filter By Price</h3>
+                            </div>
+                            <div class="filter_price">
+                                <div id="slider-range"></div>
+                                <label for="amount">Price range:</label>
+                                <input type="text" id="amount" readonly />
+                                <a href="#">Filter</a>
+                            </div>
+                        </aside>*@
                     <aside class="left_sidebar p_sale_widget">
                         <div class="p_w_title">
                             <h3>Top Sale Products</h3>

@@ -1,4 +1,4 @@
-﻿
+﻿@model IceCream.Models.Book
 @{
     ViewData["Title"] = "AllBook";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,7 +9,7 @@
         <div class="banner_text">
             <br />
             <br />
-            <h3>Our Cakes</h3>
+            <h3>Our Book</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cakes.html">Order book</a></li>
@@ -26,111 +26,25 @@
             <h5>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h5>
         </div>
         <div class="cake_feature_row row">
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
+            @foreach (var book in ViewBag.books)
+            {
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="cake_feature_item">
+                        <div class="cake_img">
+                            <img src="~/img/books/@book.BookPhoto" width="250" height="360" alt="">
+                        </div>
+                        <div class="cake_text">
+                            <br />
+                            <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$@book.BookPrice</p>
+                            <h3>@book.BookName</h3>
+                            <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="~/img/books/BookCream1.png" width="250" height="370" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <br />
-                        <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$37</p>
-                        <h3>Strawberry Cream</h3>
-                        <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
-                    </div>
-                </div>
-            </div>
-       
+            }
+          
+
+
         </div>
     </div>
 </section>

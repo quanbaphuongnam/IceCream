@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IceCream.Services;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,22 @@ namespace IceCream.Controllers
     [Route("book")]
     public class BookController : Controller
     {
-        
+        private BookService bookService;
+        private IWebHostEnvironment webHostEnvironment;
+
+
+        public BookController(BookService _bookService, IWebHostEnvironment _webHostEnvironment)
+        {
+            bookService = _bookService;
+
+        }
+
+
         [Route("allbook")]
         [Route("")]
-        public IActionResult Index()
+        public IActionResult AllBook()
         {
+            ViewBag.books = bookService.FindAllBook();
             return View("allbook");
         }
         [Route("bookdetails")]

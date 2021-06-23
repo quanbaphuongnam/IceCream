@@ -1,4 +1,5 @@
 using IceCream.Models;
+using IceCream.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,7 +37,9 @@ namespace IceCream
             services.AddSession();
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingProxies().UseSqlServer(connectionString));
-            //services.AddScoped<CategoryService, CategoryServiceImpl>();
+            services.AddScoped<BookService, BookServiceImpl>();
+            services.AddScoped<RecipeService, RecipeServiceImpl>();
+            services.AddScoped<SavourService, SavourServiceImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
