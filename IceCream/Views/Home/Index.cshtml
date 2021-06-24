@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IceCream.Models.Formula
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -230,55 +231,23 @@
                 <h5> To see more formulas than you need to become our member</h5>
             </div>
             <div class="cake_feature_slider owl-carousel">
-                <div class="item">
-                    <div class="cake_feature_item">
-                        <div class="cake_img">
-                            <img src="~/img/cake-feature/c-feature-1.jpg" alt="">
-                        </div>
-                        <div class="cake_text">
-                            <h4>Free</h4>
-                            <h3>Strawberry Cream</h3>
-                            <a class="pest_btn" href="#">Watch now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cake_feature_item">
-                        <div class="cake_img">
-                            <img src="~/img/cake-feature/c-feature-2.jpg" alt="">
-                        </div>
-                        <div class="cake_text">
-                            <h4>Free</h4>
-                            <h3>Strawberry Cream</h3>
-                            <a class="pest_btn" href="#">Watch now</a>
+                    @foreach (var newrecipe in ViewBag.newrecipes)
+                    {
+                    <div class="item">
+                        <div class="cake_feature_item">
+                            <div class="cake_img">
+                                <img src="~/img/cake-feature/c-feature-1.jpg" alt="">
+                                <span style=" position: absolute; top: -13px; right: -13px; width: 121px; height: 121px; z-index: 100; overflow: hidden; " wfd-id="428"><img src="~/img/new-icon.png"></span>
+                            </div>
+                            <div class="cake_text">
+                                <h4>@newrecipe.ForCondition</h4>
+                                <h3> @newrecipe.ForName</h3>
+                                <a class="pest_btn" href="#">See now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="cake_feature_item">
-                        <div class="cake_img">
-                            <img src="~/img/cake-feature/c-feature-3.jpg" alt="">
-                        </div>
-                        <div class="cake_text">
-                            <h4>Free</h4>
-                            <h3>Strawberry Cream</h3>
-                            <a class="pest_btn" href="#">Watch now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cake_feature_item">
-                        <div class="cake_img">
-                            <img src="~/img/cake-feature/c-feature-4.jpg" alt="">
-                        </div>
-                        <div class="cake_text">
-                            <h4>Free</h4>
-                            <h3>Strawberry Cream</h3>
-                            <a class="pest_btn" href="#">Watch now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    }
+             </div>
         </div>
     </div>
 </section>
@@ -518,7 +487,7 @@
             <div class="col-lg-6">
                 <div class="newsletter_form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter your email address">
+
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button">Subscribe Now</button>
                         </div>

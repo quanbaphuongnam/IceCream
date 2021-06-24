@@ -9,5 +9,6 @@ namespace IceCream.Services
     public interface RecipeService
     {
         List<Formula> FindAllFormula();
+        List<Formula> FindAllNewFormula();
     }
 }

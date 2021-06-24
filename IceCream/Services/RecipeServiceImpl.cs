@@ -18,5 +18,10 @@ namespace IceCream.Services
         {
             return db.Formulas.ToList();
         }
+
+        public List<Formula> FindAllNewFormula()
+        {
+            return db.Formulas.OrderByDescending(f => f.ForId).Take(6).ToList();
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace IceCream.Controllers
         {
             ViewBag.savours = savourService.FindAllSavour();
             ViewBag.recipes = recipeService.FindAllFormula();
+            ViewBag.newrecipes = recipeService.FindAllNewFormula();
             return View("recipe");
         }
         [Route("recipedetail")]
