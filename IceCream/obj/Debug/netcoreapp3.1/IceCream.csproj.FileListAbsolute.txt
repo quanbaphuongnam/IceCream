@@ -566,3 +566,10 @@ C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razo
 C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLySmell\QuanLySmell.cshtml.g.cs
 C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyHoaDon\QuanLyHoaDon.cshtml.g.cs
 C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\ApproveRecipe\ApproveRecipe.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\ApproveRecipe\ApproveRecipe.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyBook\QuanLyBook.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyHoaDon\QuanLyHoaDon.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyRecipe\QuanLyRecipe.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLySmell\QuanLySmell.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyUser\QuanLyUser.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\SharedAdmin\_LayoutAdmin.cshtml.g.cs

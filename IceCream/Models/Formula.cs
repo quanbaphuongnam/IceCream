@@ -15,6 +15,7 @@ namespace IceCream.Models
         }
 
         public int ForId { get; set; }
+        public string ForCover { get; set; }
         public string ForName { get; set; }
         public string ForDescription { get; set; }
         public int? ForContributors { get; set; }

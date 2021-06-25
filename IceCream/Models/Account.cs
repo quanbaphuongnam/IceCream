@@ -20,6 +20,7 @@ namespace IceCream.Models
         public int AccId { get; set; }
         public string AccUsername { get; set; }
         public string AccPassword { get; set; }
+        public string AccAvatar { get; set; }
         public string AccEmail { get; set; }
         public string AccPhone { get; set; }
         public string AccFullname { get; set; }

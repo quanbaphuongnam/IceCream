@@ -48,7 +48,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.AccId)
-                    .HasName("PK__account__9A20D55450664559");
+                    .HasName("PK__account__9A20D554C9FB9D77");
 
                 entity.ToTable("account");
 
@@ -57,6 +57,10 @@ namespace IceCream.Models
                 entity.Property(e => e.AccAddr)
                     .HasMaxLength(255)
                     .HasColumnName("acc_addr");
+
+                entity.Property(e => e.AccAvatar)
+                    .HasColumnType("text")
+                    .HasColumnName("acc_avatar");
 
                 entity.Property(e => e.AccDob)
                     .HasColumnType("date")
@@ -102,7 +106,7 @@ namespace IceCream.Models
             modelBuilder.Entity<AccountPayment>(entity =>
             {
                 entity.HasKey(e => e.AccPayId)
-                    .HasName("PK__account___8FE96C606BC94341");
+                    .HasName("PK__account___8FE96C602188D38A");
 
                 entity.ToTable("account_payment");
 
@@ -134,9 +138,7 @@ namespace IceCream.Models
                     .HasColumnType("datetime")
                     .HasColumnName("book_created");
 
-                entity.Property(e => e.BookDescription)
-                    .HasMaxLength(250)
-                    .HasColumnName("book_description");
+                entity.Property(e => e.BookDescription).HasColumnName("book_description");
 
                 entity.Property(e => e.BookName)
                     .HasMaxLength(100)
@@ -164,7 +166,7 @@ namespace IceCream.Models
             modelBuilder.Entity<FeedbackBook>(entity =>
             {
                 entity.HasKey(e => e.FeedbackId)
-                    .HasName("PK__feedback__7A6B2B8C81EDA900");
+                    .HasName("PK__feedback__7A6B2B8CC5CD2D8C");
 
                 entity.ToTable("feedback_book");
 
@@ -200,7 +202,7 @@ namespace IceCream.Models
             modelBuilder.Entity<FeedbackFormula>(entity =>
             {
                 entity.HasKey(e => e.FeedbackId)
-                    .HasName("PK__feedback__7A6B2B8C6D7774A9");
+                    .HasName("PK__feedback__7A6B2B8CD2534956");
 
                 entity.ToTable("feedback_formula");
 
@@ -236,28 +238,30 @@ namespace IceCream.Models
             modelBuilder.Entity<Formula>(entity =>
             {
                 entity.HasKey(e => e.ForId)
-                    .HasName("PK__formula__02A5094823E1931C");
+                    .HasName("PK__formula__02A5094876C520E2");
 
                 entity.ToTable("formula");
 
                 entity.Property(e => e.ForId).HasColumnName("for_id");
 
                 entity.Property(e => e.ForCondition)
-                    .HasMaxLength(5)
+                    .HasMaxLength(6)
                     .HasColumnName("for_condition");
 
                 entity.Property(e => e.ForContributors).HasColumnName("for_contributors");
+
+                entity.Property(e => e.ForCover)
+                    .HasColumnType("text")
+                    .HasColumnName("for_cover");
 
                 entity.Property(e => e.ForCreated)
                     .HasColumnType("datetime")
                     .HasColumnName("for_created");
 
-                entity.Property(e => e.ForDescription)
-                    .HasMaxLength(250)
-                    .HasColumnName("for_description");
+                entity.Property(e => e.ForDescription).HasColumnName("for_description");
 
                 entity.Property(e => e.ForName)
-                    .HasMaxLength(100)
+                    .HasMaxLength(200)
                     .HasColumnName("for_name");
 
                 entity.Property(e => e.ForStatus)
@@ -277,7 +281,7 @@ namespace IceCream.Models
             modelBuilder.Entity<InvoiceAccount>(entity =>
             {
                 entity.HasKey(e => e.InvId)
-                    .HasName("PK__invoice___A8749C29AB191453");
+                    .HasName("PK__invoice___A8749C290BF65F8B");
 
                 entity.ToTable("invoice_account");
 
@@ -360,7 +364,7 @@ namespace IceCream.Models
             modelBuilder.Entity<PhotoFormula>(entity =>
             {
                 entity.HasKey(e => e.IdPhoto)
-                    .HasName("PK__photo_fo__599E10AC0EEF6558");
+                    .HasName("PK__photo_fo__599E10AC4E40FDA8");
 
                 entity.ToTable("photo_formula");
 
@@ -381,7 +385,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Savour>(entity =>
             {
                 entity.HasKey(e => e.HashtagId)
-                    .HasName("PK__savour__F59C84EC7170F5DD");
+                    .HasName("PK__savour__F59C84ECA6C949F1");
 
                 entity.ToTable("savour");
 
@@ -390,7 +394,7 @@ namespace IceCream.Models
                     .HasColumnName("hashtag_id");
 
                 entity.Property(e => e.SavIngredients)
-                    .HasMaxLength(50)
+                    .HasMaxLength(250)
                     .HasColumnName("sav_ingredients");
 
                 entity.Property(e => e.SavName)
@@ -401,15 +405,13 @@ namespace IceCream.Models
                     .HasColumnType("text")
                     .HasColumnName("sav_photo");
 
-                entity.Property(e => e.SavProcedure)
-                    .HasMaxLength(250)
-                    .HasColumnName("sav_procedure");
+                entity.Property(e => e.SavProcedure).HasColumnName("sav_procedure");
             });
 
             modelBuilder.Entity<SavourBook>(entity =>
             {
                 entity.HasKey(e => e.IdSavourBook)
-                    .HasName("PK__savour_b__62190A38A3C7F687");
+                    .HasName("PK__savour_b__62190A384A59A74C");
 
                 entity.ToTable("savour_book");
 
@@ -435,7 +437,7 @@ namespace IceCream.Models
             modelBuilder.Entity<SavourFormula>(entity =>
             {
                 entity.HasKey(e => e.IdSavourFormula)
-                    .HasName("PK__savour_f__0E57A4070621C46A");
+                    .HasName("PK__savour_f__0E57A40751338BFE");
 
                 entity.ToTable("savour_formula");
 
@@ -461,7 +463,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Service>(entity =>
             {
                 entity.HasKey(e => e.SerId)
-                    .HasName("PK__service__628330EB0C31C535");
+                    .HasName("PK__service__628330EB01C16A05");
 
                 entity.ToTable("service");
 
@@ -481,7 +483,7 @@ namespace IceCream.Models
             modelBuilder.Entity<ServiceAccount>(entity =>
             {
                 entity.HasKey(e => e.SerAccId)
-                    .HasName("PK__service___CF50F8730BE49E30");
+                    .HasName("PK__service___CF50F873A11B37E9");
 
                 entity.ToTable("service_account");
 

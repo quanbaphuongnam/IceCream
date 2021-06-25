@@ -48,7 +48,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 2 "C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 2 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
   
     ViewData["Title"] = "AllBook";
     Layout = "~/Views/Shared/_Layout.cshtml";
