@@ -55,7 +55,7 @@ namespace AspNetCore
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 3 "C:\Users\asus\OneDrive\Máy tính\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
   
     ViewData["Title"] = "Recipe";
     Layout = "~/Views/Shared/_Layout.cshtml";
