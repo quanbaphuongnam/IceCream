@@ -573,3 +573,4 @@ C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Ra
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLySmell\QuanLySmell.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyUser\QuanLyUser.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\SharedAdmin\_LayoutAdmin.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Recipe\PostRecipe.cshtml.g.cs

@@ -36,5 +36,11 @@ namespace IceCream.Controllers
         {
             return View("recipedetail");
         }
+        [Route("postrecipe")]
+        public IActionResult PostRecipe()
+        {
+            ViewBag.savours = savourService.FindAllSavour();
+            return View("postrecipe");
+        }
     }
 }
