@@ -47,8 +47,11 @@
                                     <span style=" position: absolute; top: -13px; right: -13px; width: 121px; height: 121px; z-index: 100; overflow: hidden; " wfd-id="428"><img src="~/img/new-icon.png"></span>
                                 </div>
                                 <div class="cake_text">
-                                    <h4>@newrecipe.ForCondition</h4>
-
+                                    @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+                                    {
+                                        <h4>@newrecipe.ForCondition</h4>
+                                    }
+                                   
                                     <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
 
                                     <h3>@newrecipe.ForName</h3>
