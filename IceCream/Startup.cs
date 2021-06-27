@@ -35,11 +35,13 @@ namespace IceCream
 
             services.AddControllersWithViews();
             services.AddSession();
+            services.AddHttpContextAccessor();
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingProxies().UseSqlServer(connectionString));
             services.AddScoped<BookService, BookServiceImpl>();
             services.AddScoped<RecipeService, RecipeServiceImpl>();
             services.AddScoped<SavourService, SavourServiceImpl>();
+            services.AddScoped<AccountService, AccountServiceImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

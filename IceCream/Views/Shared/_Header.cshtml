@@ -1,4 +1,6 @@
-﻿
+﻿@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
 <div class="box_menu_four">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,48 +33,20 @@
                     <li class="dropdown submenu">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
                         <ul class="dropdown-menu">
-                            <li><a class="popup-with-zoom-anim" href="#test-login">Login</a></li>
-                            <li><a asp-controller="profile" asp-action="profile">Profile</a></li>
-                            <li><a asp-controller="cart" asp-action="cart">Cart</a></li>
-
+                            @if (@HttpContextAccessor.HttpContext.Session.GetString("username") != null)
+                            {
+                                <li><a asp-controller="profile" asp-action="profile">@HttpContextAccessor.HttpContext.Session.GetString("username")</a></li>
+                                <li><a asp-controller="cart" asp-action="cart">Cart</a></li>
+                                <li><a asp-controller="account" asp-action="logout">Log out</a></li>
+                            }
+                            else
+                            {
+                                <li><a class="popup-with-zoom-anim" href="#test-login">Login</a></li>
+                                <li><a asp-controller="cart" asp-action="cart">Cart</a></li>
+                            }
                         </ul>
                     </li>
-                    @*<li class="dropdown submenu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="service.html">Services</a></li>
-                                <li class="dropdown submenu">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="portfolio.html">-  Gallery Classic</a></li>
-                                        <li><a href="portfolio-full-width.html">-  Gallery Full width</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="faq.html">Faq</a></li>
-                                <li><a href="what-we-make.html">What we make</a></li>
-                                <li><a href="special.html">Special Recipe</a></li>
-                                <li><a href="404.html">404 page</a></li>
-                                <li><a href="comming-soon.html">Coming Soon page</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown submenu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog.html">Blog with sidebar</a></li>
-                                <li><a href="blog-2column.html">Blog 2 column</a></li>
-                                <li><a href="single-blog.html">Blog details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown submenu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Main shop</a></li>
-                                <li><a href="product-details.html">Product Details</a></li>
-                                <li><a href="cart.html">Cart Page</a></li>
-                                <li><a href="checkout.html">Checkout Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact Us</a></li>*@
+                   
                     <li class="search_icon"><a class="popup-with-zoom-anim" href="#test-search"><i class="icon icon-Search"></i></a></li>
                 </ul>
             </div>
@@ -99,14 +73,22 @@
                 </form>
             </div>
             <div class="form-containerr sign-in-containerr">
-                <form action="#">
+                <form method="post" asp-controller="account" asp-action="login" id="formLogin">
                     <h1>Sign in</h1>
                     <span>or use your account</span>
-                    <input type="text" placeholder="Username" />
-                    <input type="password" placeholder="Password" />
+                    <input type="text" placeholder="Username" name="username" />
+                    <input type="password" placeholder="Password" name="password" />
                     <a href="#" style="margin: 10px 0px">Forgot your password?</a>
-                    <button>Sign In</button>
+                    <button type="submit" form="formLogin" name="Login">Sign In</button>
                 </form>
+                @if (@HttpContextAccessor.HttpContext.Session.GetString("msg") != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            alert("@HttpContextAccessor.HttpContext.Session.GetString("msg")");
+                            };
+                    </script>
+                }
             </div>
             <div class="overlay-containerr">
                 <div class="overlay">
@@ -138,3 +120,4 @@
         </script>
     </div>
 </div>
+@*----------------*@

@@ -1,5 +1,7 @@
 ﻿@model IceCream.Models.BigModel.AllFormula
+@using Microsoft.AspNetCore.Http;
 
+@inject IHttpContextAccessor HttpContextAccessor
 @{
     ViewData["Title"] = "Recipe";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,7 +14,7 @@
             <h3>All Recipe</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#" id="contact">Recipe</a></li>
+                <li><a href="#">Recipe</a></li>
             </ul>
         </div>
     </div>
@@ -31,7 +33,7 @@
                             <span>Showing 1 - 10 of 55 results</span>
                         </div>
                         <div class="float-right">
-                            <button class="custom-btn btn-12"><span>Create!</span><span>New post</span></button>
+                            <button id="contact" onclick="location.href='#';" class="custom-btn btn-12"><span>Create!</span><span>New post</span></button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +66,12 @@
 
                                 </div>
                                 <div class="cake_text">
-                                    <h4>@recipe.ForCondition</h4>
+                                    @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+                                    {
+                                        <h4>@recipe.ForCondition</h4>
+                                    }
+
+
                                     <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
                                     <h3>@recipe.ForName</h3>
                                     <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">See now</a>
@@ -188,78 +195,78 @@
 </section>
 
 
-    <!--
-    This is the Popup Contact Form we use at:
-    http://notnatural.co
+<!--
+This is the Popup Contact Form we use at:
+http://notnatural.co
 
-    Examples for submitting the form data can be found at:
-    https://bit.ly/responsive-popup-contact-form
+Examples for submitting the form data can be found at:
+https://bit.ly/responsive-popup-contact-form
 
-    Popup Contact Form based on:
-    https://codepen.io/jhnwlsn/pen/vulgn by John Wilson
-    https://codyhouse.co/gem/simple-confirmation-popup/
-    -->
+Popup Contact Form based on:
+https://codepen.io/jhnwlsn/pen/vulgn by John Wilson
+https://codyhouse.co/gem/simple-confirmation-popup/
+-->
 
-    <div class="contact-container">
-        <h2>Feel free to get in touch.</h2>
-        <ul class="actions">
-            <li><a href="#"  class="button big">Contact Us</a></li>
-        </ul>
-    </div>
+<div class="contact-container">
+    <h2>Feel free to get in touch.</h2>
+    <ul class="actions">
+        <li><a href="#" class="button big">Contact Us</a></li>
+    </ul>
+</div>
 
-    <div class="cd-popup contact" role="alert">
-        <form name="contactform" id="contactform" class="contact-form">
-            <div class="cd-popup-container" style="">
-                <p style="">
-                    <a href="" class="cd-popup-close cd-close-button">
-                        <i class="fa fa-times" style="pointer-events:none;"></i>
-                    </a>
-                </p>
+<div class="cd-popup contact" role="alert">
+    <form name="contactform" id="contactform" class="contact-form">
+        <div class="cd-popup-container" style="">
+            <p style="">
+                <a href="" class="cd-popup-close cd-close-button">
+                    <i class="fa fa-times" style="pointer-events:none;"></i>
+                </a>
+            </p>
 
-                <div class="name">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" />
-                </div>
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" />
-                </div>
-                <div class="email">
-                    <label for="email">NSN</label>
-                    <input type="text" id="email" name="email" />
-                </div>
-                <div class="email">
-                    <label for="email">Part Number</label>
-                    <input type="text" id="email" name="email" />
-                </div>
-                <div class="message">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" name="message"></textarea>
-                </div>
-                <div class="email">
-                    <label for="email">QTY</label>
-                    <input type="text" id="email" name="email" />
-                </div>
-                <div class="message">
-                    <label for="message">Extra note</label>
-                    <textarea name="message" id="message" name="message"></textarea>
-                </div>
-                <br>
-                <div style="text-align:left">
-                    <input type="checkbox" id="human" name="human" />
-                    <label for="human">I am a human and not a robot.</label>
-                </div>
-                <br>
-                <div class="submit">
-                    <p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are all welcome!</p>
-                    <input type="submit" name="submit" id="submit" value="Send" />
-                </div>
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
             </div>
-        </form>
-    </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" />
+            </div>
+            <div class="email">
+                <label for="email">NSN</label>
+                <input type="text" id="email" name="email" />
+            </div>
+            <div class="email">
+                <label for="email">Part Number</label>
+                <input type="text" id="email" name="email" />
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" name="message"></textarea>
+            </div>
+            <div class="email">
+                <label for="email">QTY</label>
+                <input type="text" id="email" name="email" />
+            </div>
+            <div class="message">
+                <label for="message">Extra note</label>
+                <textarea name="message" id="message" name="message"></textarea>
+            </div>
+            <br>
+            <div style="text-align:left">
+                <input type="checkbox" id="human" name="human" />
+                <label for="human">I am a human and not a robot.</label>
+            </div>
+            <br>
+            <div class="submit">
+                <p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are all welcome!</p>
+                <input type="submit" name="submit" id="submit" value="Send" />
+            </div>
+        </div>
+    </form>
+</div>
 
-    
-    <script src="~/js/jspost/jquery.min.js"></script>
+
+<script src="~/js/jspost/jquery.min.js"></script>
 
 
 
