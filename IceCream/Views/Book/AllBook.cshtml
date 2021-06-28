@@ -11,8 +11,8 @@
             <br />
             <h3>Our Book</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cakes.html">Order book</a></li>
+                <li><a asp-controller="home" asp-action="index">Home</a></li>
+                <li><a asp-controller="book" asp-action="allbook">Order book</a></li>
             </ul>
         </div>
     </div>
@@ -41,7 +41,7 @@
                             <br />
                             <p style="color: #f52c2c; font-family: Impact, fantasy; font-size: 40px ">$@book.BookPrice</p>
                             <h3>@book.BookName</h3>
-                            <a asp-controller="book" asp-action="bookdetails" class="custom-btn btn-5">Add cart</a>
+                            <a asp-controller="book" asp-action="bookdetails" asp-route-id="@book.BookId" class="custom-btn btn-5">Add cart</a>
                         </div>
                     </div>
                 </div>

@@ -30,8 +30,19 @@ namespace IceCream.Controllers
             return View("allbook");
         }
         [Route("bookdetails")]
-        public IActionResult BookDetails()
+        public IActionResult BookDetails(int id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var book = bookService.Find(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            ViewBag.books = bookService.FindAllBook();
+            ViewBag.book = book;
             return View("bookdetails");
         }
     }

@@ -14,6 +14,12 @@ namespace IceCream.Services
             db = _db;
         }
 
+        public Book Find(int id)
+        {
+            return db.Books.SingleOrDefault(b => b.BookId == id);
+            
+        }
+
         public List<Book> FindAllBook()
         {
             return db.Books.ToList();
