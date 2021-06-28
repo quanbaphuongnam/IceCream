@@ -10,5 +10,6 @@ namespace IceCream.Services
     {
         List<Book> FindAllBook();
 
+        Book Find(int id);
     }
 }
