@@ -64,12 +64,13 @@ namespace IceCream.Controllers
                 {
                     HttpContext.Session.SetInt32("account", account.Login(username, password).AccId);
                     HttpContext.Session.SetString("username", account.Login(username, password).AccUsername);
-                    HttpContext.Session.Remove("msg");
+                    HttpContext.Session.SetString("msg", "s");
+                    //HttpContext.Session.Remove("msg");
                     return RedirectToAction("index","home");
                 }
                 else
                 {
-                    HttpContext.Session.SetString("msg", "Wrong username or password");
+                    HttpContext.Session.SetString("msg", "f");
                 }
             }
             return RedirectToAction("index","home");

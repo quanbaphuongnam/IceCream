@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Http;
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @inject IHttpContextAccessor HttpContextAccessor
 <div class="box_menu_four">
     <div class="container">
@@ -81,12 +81,31 @@
                     <a href="#" style="margin: 10px 0px">Forgot your password?</a>
                     <button type="submit" form="formLogin" name="Login">Sign In</button>
                 </form>
-                @if (@HttpContextAccessor.HttpContext.Session.GetString("msg") != null)
+                @if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="f")
+                {
+
+
+                    <script type="text/javascript">
+                        Swal.fire({
+
+                            icon: 'error',
+                            title: 'Login Fail',
+                            text: ' Incorrect username or password',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    </script>
+                }
+                else if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="s")
                 {
                     <script type="text/javascript">
-                        window.onload = function () {
-                            alert("@HttpContextAccessor.HttpContext.Session.GetString("msg")");
-                            };
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Login succesfull',
+                            text: ' Welcome to IceCream',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     </script>
                 }
             </div>
@@ -121,3 +140,4 @@
     </div>
 </div>
 @*----------------*@
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
