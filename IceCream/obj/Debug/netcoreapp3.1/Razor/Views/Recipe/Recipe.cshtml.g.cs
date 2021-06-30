@@ -13,7 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 2 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
@@ -74,7 +74,7 @@ using Microsoft.AspNetCore.Http;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 5 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 5 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
   
     ViewData["Title"] = "Recipe";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -117,7 +117,7 @@ using Microsoft.AspNetCore.Http;
                 <div class=""row product_item_inner"">
 ");
 #nullable restore
-#line 41 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 41 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
                      foreach (var newrecipe in ViewBag.newrecipes)
                     {
 
@@ -133,7 +133,7 @@ using Microsoft.AspNetCore.Http;
             BeginAddHtmlAttributeValues(__tagHelperExecutionContext, "src", 2, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
             AddHtmlAttributeValue("", 1952, "~/img/recipe/", 1952, 13, true);
 #nullable restore
-#line 46 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 46 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
 AddHtmlAttributeValue("", 1965, newrecipe.ForCover, 1965, 19, false);
 
 #line default
@@ -166,7 +166,7 @@ AddHtmlAttributeValue("", 1965, newrecipe.ForCover, 1965, 19, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</span>\r\n                                </div>\r\n                                <div class=\"cake_text\">\r\n");
 #nullable restore
-#line 50 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 50 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
                                      if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
                                     {
 
@@ -175,7 +175,7 @@ AddHtmlAttributeValue("", 1965, newrecipe.ForCover, 1965, 19, false);
 #nullable disable
             WriteLiteral("                                        <h4>");
 #nullable restore
-#line 52 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 52 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
                                        Write(newrecipe.ForCondition);
 
 #line default
@@ -183,7 +183,7 @@ AddHtmlAttributeValue("", 1965, newrecipe.ForCover, 1965, 19, false);
 #nullable disable
             WriteLiteral("</h4>\r\n");
 #nullable restore
-#line 53 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
+#line 53 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\Recipe.cshtml"
                                     }
 
 #line default

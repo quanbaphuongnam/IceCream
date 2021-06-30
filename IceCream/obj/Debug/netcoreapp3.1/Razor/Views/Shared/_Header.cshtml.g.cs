@@ -13,7 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
+#line 1 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Shared\_Header.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
@@ -247,7 +247,7 @@ using Microsoft.AspNetCore.Http;
                         <ul class=""dropdown-menu"">
 ");
 #nullable restore
-#line 36 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
+#line 36 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Shared\_Header.cshtml"
                              if (@HttpContextAccessor.HttpContext.Session.GetString("username") != null)
                             {
 
@@ -257,7 +257,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("                                <li>");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "223c83676872a44746fb4f4b789e2e75bf44f57b26651", async() => {
 #nullable restore
-#line 38 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
+#line 38 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Shared\_Header.cshtml"
                                                                                 Write(HttpContextAccessor.HttpContext.Session.GetString("username"));
 
 #line default
@@ -316,7 +316,7 @@ using Microsoft.AspNetCore.Http;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n");
 #nullable restore
-#line 41 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
+#line 41 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Shared\_Header.cshtml"
                             }
                             else
                             {
@@ -344,7 +344,7 @@ using Microsoft.AspNetCore.Http;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n");
 #nullable restore
-#line 46 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
+#line 46 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Shared\_Header.cshtml"
                             }
 
 #line default
@@ -559,8 +559,6 @@ AddHtmlAttributeValue("", 3723, ViewBag.postUrl, 3723, 16, false);
                  if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="f")
                 {
 
-
-
 #line default
 #line hidden
 #nullable disable
@@ -579,7 +577,7 @@ AddHtmlAttributeValue("", 3723, ViewBag.postUrl, 3723, 16, false);
 #line 111 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Shared\_Header.cshtml"
                     HttpContextAccessor.HttpContext.Session.Remove("msg");
                 }
-                else if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="s")
+                else if (@HttpContextAccessor.HttpContext.Session.GetString("msg") == "s")
                 {
 
 #line default

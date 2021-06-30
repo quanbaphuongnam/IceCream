@@ -51,7 +51,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 2 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 2 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Book\AllBook.cshtml"
   
     ViewData["Title"] = "AllBook";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -115,7 +115,7 @@ namespace AspNetCore
         <div class=""cake_feature_row row"">
 ");
 #nullable restore
-#line 33 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 33 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Book\AllBook.cshtml"
              foreach (var book in ViewBag.books)
             {
 
@@ -150,7 +150,7 @@ AddHtmlAttributeValue("", 1359, book.BookPhoto, 1359, 15, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        </div>\r\n                        <div class=\"cake_text\">\r\n                            <br />\r\n                            <p style=\"color: #f52c2c; font-family: Impact, fantasy; font-size: 40px \">$");
 #nullable restore
-#line 42 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 42 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Book\AllBook.cshtml"
                                                                                                   Write(book.BookPrice);
 
 #line default
@@ -158,7 +158,7 @@ AddHtmlAttributeValue("", 1359, book.BookPhoto, 1359, 15, false);
 #nullable disable
             WriteLiteral("</p>\r\n                            <h3>");
 #nullable restore
-#line 43 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 43 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Book\AllBook.cshtml"
                            Write(book.BookName);
 
 #line default
@@ -200,7 +200,7 @@ AddHtmlAttributeValue("", 1359, book.BookPhoto, 1359, 15, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n");
 #nullable restore
-#line 48 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Book\AllBook.cshtml"
+#line 48 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Book\AllBook.cshtml"
             }
 
 #line default

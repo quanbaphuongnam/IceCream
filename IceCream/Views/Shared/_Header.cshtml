@@ -94,10 +94,8 @@
                     <a href="#" style="margin: 10px 0px">Forgot your password?</a>
                     <button type="submit" form="formLogin" name="Login">Sign In</button>
                 </form>
-                @if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="f")
+                @if (@HttpContextAccessor.HttpContext.Session.GetString("msg") == "f")
                 {
-
-
                     <script type="text/javascript">
                         Swal.fire({
 
@@ -110,7 +108,7 @@
                     </script>
                     HttpContextAccessor.HttpContext.Session.Remove("msg");
                 }
-                else if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="s")
+                else if (@HttpContextAccessor.HttpContext.Session.GetString("msg") == "s")
                 {
                     <script type="text/javascript">
                         Swal.fire({
