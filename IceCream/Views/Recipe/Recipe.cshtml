@@ -51,16 +51,29 @@
                                     {
                                         <h4>@newrecipe.ForCondition</h4>
                                     }
-                                   
-                                    <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
+
+                                    @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == @newrecipe.AccUsername)
+                                    {
+                                        <br /><div style=" font-size: 14px ;text-align:right">
+                                            by: <a href="#">
+                                                You
+                                            </a>&ensp;
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <br /><div style=" font-size: 14px ;text-align:right">by: <a href="#">@newrecipe.AccUsername</a>&ensp;
+                                        </div>
+                                    } 
+
 
                                     <h3>@newrecipe.ForName</h3>
-                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">See now</a>
+                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail" asp-route-id="@newrecipe.ForId">See now</a>
                                 </div>
                             </div>
                         </div>
                     }
-                    @foreach (var recipe in ViewBag.recipes)
+                    @foreach (var recipe in (IEnumerable<dynamic>)ViewBag.recipes)
                     {
                         <div class="col-lg-4 col-md-4 col-6">
                             <div class="cake_feature_item">
@@ -69,15 +82,22 @@
 
                                 </div>
                                 <div class="cake_text">
-                                    @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+
+                                    @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == @recipe.AccUsername)
                                     {
-                                        <h4>@recipe.ForCondition</h4>
+                                        <br /><div style=" font-size: 14px ;text-align:right">
+                                            by: <a href="#">
+                                                You
+                                            </a>&ensp;
+                                        </div>
                                     }
-
-
-                                    <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
+                                    else
+                                    {
+                                        <br /><div style=" font-size: 14px ;text-align:right">by: <a href="#">@recipe.AccUsername</a>&ensp;
+</div>
+                                    }
                                     <h3>@recipe.ForName</h3>
-                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">See now</a>
+                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail" asp-route-id="@recipe.ForId">See now</a>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +135,7 @@
                     </aside>
                     <aside class="left_sidebar p_catgories_widget">
                         <div class="p_w_title">
-                            <h3 id="textcolor">All popular flavors</h3>
+                            <h3 id="textcolor">Popular flavor</h3>
                         </div>
                         <ul class="list_style">
                             @foreach (var savour in ViewBag.savours)
@@ -210,49 +230,37 @@ https://codepen.io/jhnwlsn/pen/vulgn by John Wilson
 https://codyhouse.co/gem/simple-confirmation-popup/
 -->
 
-<div class="contact-container">
-    <h2>Feel free to get in touch.</h2>
-    <ul class="actions">
-        <li><a href="#" class="button big">Contact Us</a></li>
-    </ul>
-</div>
+
 
 <div class="cd-popup contact" role="alert">
-    <form name="contactform" id="contactform" class="contact-form">
+    <form  method="post"  asp-controller="recipe" asp-action="postrecipe" enctype="multipart/form-data" id="contactform" class="contact-form">
         <div class="cd-popup-container" style="">
             <p style="">
                 <a href="" class="cd-popup-close cd-close-button">
                     <i class="fa fa-times" style="pointer-events:none;"></i>
                 </a>
             </p>
-
+            <h4 style="text-align:left; "> <strong>Recipe Name</strong> </h4>
             <div class="name">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" />
+
+                <input class="input" type="text" asp-for="Formula.ForName" id="name" />
             </div>
-            <div class="email">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" />
-            </div>
-            <div class="email">
-                <label for="email">NSN</label>
-                <input type="text" id="email" name="email" />
-            </div>
-            <div class="email">
-                <label for="email">Part Number</label>
-                <input type="text" id="email" name="email" />
-            </div>
+
             <div class="message">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" name="message"></textarea>
+                <h4 style="text-align:left; "> <strong>Recipe Detail</strong> </h4>
+                <textarea id="message" type="text" asp-for="Formula.ForDescription"></textarea>
             </div>
-            <div class="email">
-                <label for="email">QTY</label>
-                <input type="text" id="email" name="email" />
-            </div>
+
             <div class="message">
-                <label for="message">Extra note</label>
-                <textarea name="message" id="message" name="message"></textarea>
+                <h4 style="text-align:left; "> <strong>Recipe Cover</strong> </h4>
+                <input style="padding: 0px 0px 8px 0px !important;" type="file" name="filecover" />
+            </div>
+          
+            <input hidden type="number" asp-for="Formula.ForContributors" value="@HttpContextAccessor.HttpContext.Session.GetInt32("account")" />
+
+            <div class="message">
+                <h4 style="text-align:left; "><strong>Photo process implementation</strong></h4>
+                <input style="padding: 0px 0px 8px 0px !important;" type="file" name="filecovers"/>
             </div>
             <br>
             <div style="text-align:left">
@@ -261,11 +269,20 @@ https://codyhouse.co/gem/simple-confirmation-popup/
             </div>
             <br>
             <div class="submit">
-                <p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are all welcome!</p>
+                <p class="user-message" id="contactblurb">We will review your formula as soon as possible!</p>
                 <input type="submit" name="submit" id="submit" value="Send" />
             </div>
         </div>
     </form>
+</div>
+
+<div class="cd-popup notification" role="alert">
+    <div class="cd-popup-container">
+        <a href="" class="cd-popup-close cd-close-button"><i class="fa fa-times" style="pointer-events:none;"></i></a>
+        <p>
+            <h3 id="notification-text">Thank you for sending a new recipe for us, we will review your formula as soon as possible!</h3>
+        </p>
+    </div>
 </div>
 
 

@@ -1,4 +1,7 @@
 ﻿@model IceCream.Models.Formula
+@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -231,8 +234,9 @@
                 <h5> To see more formulas than you need to become our member</h5>
             </div>
             <div class="cake_feature_slider owl-carousel">
-                    @foreach (var newrecipe in ViewBag.newrecipes)
-                    {
+                 
+                @foreach (var newrecipe in ViewBag.newrecipes)
+                {
                     <div class="item">
                         <div class="cake_feature_item">
                             <div class="cake_img">
@@ -240,16 +244,19 @@
                                 <span style=" position: absolute; top: -13px; right: -13px; width: 121px; height: 121px; z-index: 100; overflow: hidden; " wfd-id="428"><img src="~/img/new-icon.png"></span>
                             </div>
                             <div class="cake_text">
-                                <h4>@newrecipe.ForCondition</h4>
-                                <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
+                                @if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+                                {
+                                    <h4>@newrecipe.ForCondition</h4>
+                                }
+                                <br /><div style=" font-size: 14px ;text-align:right">by: <a href="#">@newrecipe.ForContributors</a>&ensp; </div>
                                 <h3> @newrecipe.ForName</h3>
-                                
-                                <a class="pest_btn" href="#">See now</a>
+
+                                <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">See now</a>
                             </div>
                         </div>
                     </div>
-                    }
-             </div>
+                }
+            </div>
         </div>
     </div>
 </section>
@@ -316,7 +323,7 @@
             <div class="col-lg-6 col-sm-7">
                 <div class="arivals_chocolate">
                     <div class="arivals_pic">
-                        <img class="img-fluid" src="~/img/avatar/avatardefault.jpg"  width="370" height="382" alt="">S
+                        <img class="img-fluid" src="~/img/avatar/avatardefault.jpg" width="370" height="382" alt="">S
                         <span style=" position: absolute; top: -13px; right: -13px; width: 121px; height: 121px; z-index: 100; overflow: hidden; " wfd-id="428"><img src="~/img/best1.png" width="100" height="150"></span>
 
                     </div>

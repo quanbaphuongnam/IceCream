@@ -417,7 +417,7 @@ label:hover {
 }
 
 .contact-form .email input,
-.contact-form .name input {
+.contact-form .name .input {
     padding: 23px 0 8px 23px !important;
 }
 

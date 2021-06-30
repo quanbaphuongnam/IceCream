@@ -573,7 +573,6 @@ C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Ra
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLySmell\QuanLySmell.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\QuanLyUser\QuanLyUser.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\SharedAdmin\_LayoutAdmin.cshtml.g.cs
-C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Recipe\PostRecipe.cshtml.g.cs
 C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\BCrypt.Net-Core.dll
 C:\Users\HP\Desktop\IceCream\IceCream\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\HP\Desktop\IceCream\IceCream\bin\Debug\netcoreapp3.1\appsettings.json
@@ -774,3 +773,16 @@ C:\Users\HP\Desktop\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.csproj.Co
 C:\Users\HP\Desktop\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.dll
 C:\Users\HP\Desktop\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.pdb
 C:\Users\HP\Desktop\IceCream\IceCream\obj\Debug\netcoreapp3.1\IceCream.genruntimeconfig.cache
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\Microsoft.TeamFoundation.Common.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Services.Common.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Services.WebApi.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Home\SignUpSuccess.cshtml.g.cs

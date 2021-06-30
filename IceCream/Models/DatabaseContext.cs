@@ -20,7 +20,6 @@ namespace IceCream.Models
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<AccountPayment> AccountPayments { get; set; }
         public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<FeedbackBook> FeedbackBooks { get; set; }
         public virtual DbSet<FeedbackFormula> FeedbackFormulas { get; set; }
         public virtual DbSet<Formula> Formulas { get; set; }
         public virtual DbSet<InvoiceAccount> InvoiceAccounts { get; set; }
@@ -48,7 +47,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.AccId)
-                    .HasName("PK__account__9A20D554C9FB9D77");
+                    .HasName("PK__account__9A20D5542E4E5F36");
 
                 entity.ToTable("account");
 
@@ -106,7 +105,7 @@ namespace IceCream.Models
             modelBuilder.Entity<AccountPayment>(entity =>
             {
                 entity.HasKey(e => e.AccPayId)
-                    .HasName("PK__account___8FE96C602188D38A");
+                    .HasName("PK__account___8FE96C60AFBDCD9B");
 
                 entity.ToTable("account_payment");
 
@@ -163,46 +162,10 @@ namespace IceCream.Models
                 entity.Property(e => e.BookYear).HasColumnName("book_year");
             });
 
-            modelBuilder.Entity<FeedbackBook>(entity =>
-            {
-                entity.HasKey(e => e.FeedbackId)
-                    .HasName("PK__feedback__7A6B2B8CC5CD2D8C");
-
-                entity.ToTable("feedback_book");
-
-                entity.Property(e => e.FeedbackId).HasColumnName("feedback_id");
-
-                entity.Property(e => e.AccId).HasColumnName("acc_id");
-
-                entity.Property(e => e.BookId).HasColumnName("book_id");
-
-                entity.Property(e => e.Content)
-                    .HasColumnType("text")
-                    .HasColumnName("content");
-
-                entity.Property(e => e.Created)
-                    .HasColumnType("datetime")
-                    .HasColumnName("created");
-
-                entity.Property(e => e.FeedbackStatus)
-                    .HasColumnName("feedback_status")
-                    .HasDefaultValueSql("((1))");
-
-                entity.HasOne(d => d.Acc)
-                    .WithMany(p => p.FeedbackBooks)
-                    .HasForeignKey(d => d.AccId)
-                    .HasConstraintName("FK__feedback___acc_i__440B1D61");
-
-                entity.HasOne(d => d.Book)
-                    .WithMany(p => p.FeedbackBooks)
-                    .HasForeignKey(d => d.BookId)
-                    .HasConstraintName("FK__feedback___book___4316F928");
-            });
-
             modelBuilder.Entity<FeedbackFormula>(entity =>
             {
                 entity.HasKey(e => e.FeedbackId)
-                    .HasName("PK__feedback__7A6B2B8CD2534956");
+                    .HasName("PK__feedback__7A6B2B8CADDDA5A9");
 
                 entity.ToTable("feedback_formula");
 
@@ -227,18 +190,18 @@ namespace IceCream.Models
                 entity.HasOne(d => d.Acc)
                     .WithMany(p => p.FeedbackFormulas)
                     .HasForeignKey(d => d.AccId)
-                    .HasConstraintName("FK__feedback___acc_i__48CFD27E");
+                    .HasConstraintName("FK__feedback___acc_i__440B1D61");
 
                 entity.HasOne(d => d.Formula)
                     .WithMany(p => p.FeedbackFormulas)
                     .HasForeignKey(d => d.FormulaId)
-                    .HasConstraintName("FK__feedback___formu__47DBAE45");
+                    .HasConstraintName("FK__feedback___formu__4316F928");
             });
 
             modelBuilder.Entity<Formula>(entity =>
             {
                 entity.HasKey(e => e.ForId)
-                    .HasName("PK__formula__02A5094876C520E2");
+                    .HasName("PK__formula__02A50948917052C5");
 
                 entity.ToTable("formula");
 
@@ -281,7 +244,7 @@ namespace IceCream.Models
             modelBuilder.Entity<InvoiceAccount>(entity =>
             {
                 entity.HasKey(e => e.InvId)
-                    .HasName("PK__invoice___A8749C290BF65F8B");
+                    .HasName("PK__invoice___A8749C2928621A69");
 
                 entity.ToTable("invoice_account");
 
@@ -321,7 +284,7 @@ namespace IceCream.Models
                 entity.HasOne(d => d.Acc)
                     .WithMany(p => p.InvoiceAccounts)
                     .HasForeignKey(d => d.AccId)
-                    .HasConstraintName("FK__invoice_a__acc_i__4CA06362");
+                    .HasConstraintName("FK__invoice_a__acc_i__47DBAE45");
             });
 
             modelBuilder.Entity<InvoiceDetailAccount>(entity =>
@@ -353,18 +316,18 @@ namespace IceCream.Models
                 entity.HasOne(d => d.Book)
                     .WithMany(p => p.InvoiceDetailAccounts)
                     .HasForeignKey(d => d.BookId)
-                    .HasConstraintName("FK__invoice_d__book___5070F446");
+                    .HasConstraintName("FK__invoice_d__book___4BAC3F29");
 
                 entity.HasOne(d => d.Inv)
                     .WithMany(p => p.InvoiceDetailAccounts)
                     .HasForeignKey(d => d.InvId)
-                    .HasConstraintName("FK__invoice_d__inv_i__4F7CD00D");
+                    .HasConstraintName("FK__invoice_d__inv_i__4AB81AF0");
             });
 
             modelBuilder.Entity<PhotoFormula>(entity =>
             {
                 entity.HasKey(e => e.IdPhoto)
-                    .HasName("PK__photo_fo__599E10AC4E40FDA8");
+                    .HasName("PK__photo_fo__599E10ACFCCEB0BD");
 
                 entity.ToTable("photo_formula");
 
@@ -385,7 +348,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Savour>(entity =>
             {
                 entity.HasKey(e => e.HashtagId)
-                    .HasName("PK__savour__F59C84ECA6C949F1");
+                    .HasName("PK__savour__F59C84EC5FCF5084");
 
                 entity.ToTable("savour");
 
@@ -411,7 +374,7 @@ namespace IceCream.Models
             modelBuilder.Entity<SavourBook>(entity =>
             {
                 entity.HasKey(e => e.IdSavourBook)
-                    .HasName("PK__savour_b__62190A384A59A74C");
+                    .HasName("PK__savour_b__62190A3863156F2B");
 
                 entity.ToTable("savour_book");
 
@@ -437,7 +400,7 @@ namespace IceCream.Models
             modelBuilder.Entity<SavourFormula>(entity =>
             {
                 entity.HasKey(e => e.IdSavourFormula)
-                    .HasName("PK__savour_f__0E57A40751338BFE");
+                    .HasName("PK__savour_f__0E57A4073A6FC1C9");
 
                 entity.ToTable("savour_formula");
 
@@ -463,7 +426,7 @@ namespace IceCream.Models
             modelBuilder.Entity<Service>(entity =>
             {
                 entity.HasKey(e => e.SerId)
-                    .HasName("PK__service__628330EB01C16A05");
+                    .HasName("PK__service__628330EB268C0131");
 
                 entity.ToTable("service");
 
@@ -483,7 +446,7 @@ namespace IceCream.Models
             modelBuilder.Entity<ServiceAccount>(entity =>
             {
                 entity.HasKey(e => e.SerAccId)
-                    .HasName("PK__service___CF50F873A11B37E9");
+                    .HasName("PK__service___CF50F8733D1A551B");
 
                 entity.ToTable("service_account");
 

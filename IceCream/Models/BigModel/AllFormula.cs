@@ -8,6 +8,7 @@ namespace IceCream.Models.BigModel
     public class AllFormula
     {
         public Formula Formula { get; set; }
+        public Account Account { get; set; }
         public Savour Savour { get; set; }
     }
     

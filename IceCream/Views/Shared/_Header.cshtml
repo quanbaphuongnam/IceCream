@@ -59,17 +59,30 @@
         <h2>Sign in/up</h2>
         <div class="containerr" id="containerr">
             <div class="form-containerr sign-up-containerr">
-                <form action="#">
+                <form action="@ViewBag.postUrl" method="post">
+                    <input type="hidden" name="upload" value="1" />
+                    <input type="hidden" name="return" value="@ViewBag.returnUrl" />
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="business" value="@ViewBag.business" />
+                    @{ var index = 1;}
                     <h1>Create Account</h1>
                     <input type="text" placeholder="Username" />
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
                     <input type="password" placeholder="Confirm Password" />
+
                     <select class="check-select" id="check-select">
                         <option value="15"> 15$ / month</option>
+
                         <option value="150" selected> 150$ / year</option>
+
                     </select>
-                    <button>Sign Up</button>
+                    <input type="hidden" name="item_number_@index" value="1" />
+                    <input type="hidden" name="item_name_@index" value="Gói 15" />
+                    <input type="hidden" name="amount_@index" value="15" />
+                    <input type="hidden" name="quantity_@index" value="1" />
+                    <img src="~/img/paypal.png" width="150" height="50" alt="paypal " />
+                    <button type="submit">Sign Up</button>
                 </form>
             </div>
             <div class="form-containerr sign-in-containerr">
@@ -95,6 +108,7 @@
                             timer: 2000
                         })
                     </script>
+                    HttpContextAccessor.HttpContext.Session.Remove("msg");
                 }
                 else if (@HttpContextAccessor.HttpContext.Session.GetString("msg")=="s")
                 {
@@ -107,6 +121,7 @@
                             timer: 1500
                         })
                     </script>
+                    HttpContextAccessor.HttpContext.Session.Remove("msg");
                 }
             </div>
             <div class="overlay-containerr">
