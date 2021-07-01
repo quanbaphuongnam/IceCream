@@ -1,5 +1,6 @@
 ﻿
 using IceCream.PayPal;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
@@ -28,9 +29,9 @@ namespace IceCream.Paypal
 
         private static string authToken, txToken, query, strResponse;
 
-        public static PDTHolder Success(string tx, IConfiguration configuration)
+        public static PDTHolder Success(string tx, IConfiguration configuration,HttpRequest httpRequest)
         {
-
+          
             PayPalConfig payPalConfig = PayPalService.getPayPalConfig(configuration);
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             authToken = payPalConfig.AuthToken;
@@ -41,6 +42,9 @@ namespace IceCream.Paypal
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
             req.ContentLength = query.Length;
+            req.UseDefaultCredentials = true;
+            req.Proxy.Credentials = CredentialCache.DefaultCredentials;
+            req.UserAgent = httpRequest.Headers["User-Agent"].ToString();
             StreamWriter stOut = new StreamWriter(req.GetRequestStream(), System.Text.Encoding.ASCII);
             stOut.Write(query);
             stOut.Close();

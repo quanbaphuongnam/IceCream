@@ -1,5 +1,7 @@
-﻿using IceCream.Paypal;
+﻿using Amazon.Runtime.Internal;
+using IceCream.Paypal;
 using IceCream.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -27,7 +29,7 @@ namespace IceCream.Areas.Admin.Controllers
      
         public IActionResult Index()
         {
-            ViewBag.newrecipes = recipeService.FindAllNewFormula();
+        
             ViewBag.postUrl = configuration["PayPal:PostUrl"];
             ViewBag.business = configuration["PayPal:Business"];
             ViewBag.returnUrl = configuration["PayPal:ReturnUrl"];
@@ -36,7 +38,7 @@ namespace IceCream.Areas.Admin.Controllers
         [Route("signupsuccess")]
         public IActionResult Success([FromQuery(Name = "tx")] string tx)
         {
-            var result = PDTHolder.Success(tx, configuration);
+            var result = PDTHolder.Success(tx, configuration, Request);
             Debug.WriteLine("Customer info:");
             Debug.WriteLine("First Name: " + result.PayerFirstName);
             Debug.WriteLine("LastName: " + result.PayerLastName);

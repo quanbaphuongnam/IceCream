@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\IceCream\\IceCream\\IceCream\\IceCream.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\IceCream\\IceCream\\IceCream\\IceCream.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\IceCream\\IceCream\\IceCream\\IceCream.csproj",
         "projectName": "IceCream",
-        "projectPath": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj",
-        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\obj\\",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\IceCream\\IceCream\\IceCream\\IceCream.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\IceCream\\IceCream\\IceCream\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.0.37, )"
+            },
             "Antlr3.Runtime": {
               "target": "Package",
               "version": "[3.5.1, )"
@@ -47,6 +51,10 @@
             "BCrypt.Net-Core": {
               "target": "Package",
               "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -117,7 +125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

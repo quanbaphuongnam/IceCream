@@ -1,4 +1,32 @@
-﻿<div class="footer_widgets">
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+@if (@HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+{
+<section class="newsletter_area">
+    <div class="container">
+        <div class="row newsletter_inner">
+            <div class="col-lg-6">
+                <div class="news_left_text">
+                    <h4>Become our member to get all the latest offers, discounts and other benefits</h4>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="newsletter_form">
+                    <div class="input-group">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Subscribe Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}
+
+
+<div class="footer_widgets">
     <div class="container">
         <div class="row footer_wd_inner">
             <div class="col-lg-3 col-6">

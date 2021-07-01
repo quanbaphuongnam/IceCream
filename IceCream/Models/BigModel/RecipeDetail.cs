@@ -24,5 +24,6 @@ namespace IceCream.Models.BigModel
         public string Content { get; set; }
         public DateTime? Created { get; set; }
         public byte? FeedbackStatus { get; set; }
+        public FeedbackFormula FeedbackFormula { get; set; }
     }
 }

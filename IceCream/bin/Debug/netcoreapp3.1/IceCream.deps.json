@@ -31,8 +31,10 @@
     ".NETCoreApp,Version=v3.1": {
       "IceCream/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "3.7.0.37",
           "Antlr3.Runtime": "3.5.1",
           "BCrypt.Net-Core": "1.6.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore": "5.0.7",
@@ -320,6 +322,17 @@
         },
         "compile": {
           "lib/netstandard1.1/Antlr3.Runtime.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.0.37": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.37"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
         }
       },
       "BCrypt.Net-Core/1.6.0": {
@@ -4426,6 +4439,13 @@
       "sha512": "sha512-ZwCEpLCLZXkjzf1lYEixp9hgVlYYk33ACHn6xjFyVhGRi2BpoYQez0qtatbetdylASWYTG+cGz0CGR4z66JM4w==",
       "path": "antlr3.runtime/3.5.1",
       "hashPath": "antlr3.runtime.3.5.1.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.0.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-urpl1vl9PnwOqc4WXWj+MmuB/fHmzxVPmsjuu5j7FW0h0964aUuFbCJhM++ahu55JI7JlmKHSXxlCjKiJGHeyg==",
+      "path": "awssdk.core/3.7.0.37",
+      "hashPath": "awssdk.core.3.7.0.37.nupkg.sha512"
     },
     "BCrypt.Net-Core/1.6.0": {
       "type": "package",
