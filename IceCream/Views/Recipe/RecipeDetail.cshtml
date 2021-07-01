@@ -26,7 +26,7 @@
    
         <div class="container">
             <div class="row blog_area_inner">
-                <div class="col-lg-12">
+                <div class="col-lg-9">
                     <div class="main_blog_inner single_blog_inner">
                         @foreach (var recipedetail in (IEnumerable<dynamic>)ViewBag.recipedetails)
                         {
@@ -47,12 +47,12 @@
                                             <ul class="list_style">
                                                 <li><a href="#">By :  @recipedetail.AccUsername</a></li>
                                                 <li><a href="#">bekery, sweet</a></li>
-                                                <li><a href="#">Comments: .Count</a></li>
+                                                <li><a href="#">Comments:  </a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <a href="#"><h4>@recipedetail.ForName</h4></a>
-                                   <pre>@recipedetail.ForDescription</pre>
+                                    <pre style=" overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">@recipedetail.ForDescription</pre>
                                 </div>
                             </div>
                             @*<div class="two_column_text">
@@ -66,9 +66,9 @@
                                     </div>
                                 </div>
                             </div>*@
-                            <div class="single_element_text">
-                                <p>@recipedetail.ForDescription</p>
-                            </div>
+                            @*<div class="single_element_text">       
+                                <pre style=" overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">@recipedetail.ForDescription</pre>
+                            </div>*@
                         }
                     <div class="s_comment_list">
                        
@@ -89,11 +89,13 @@
                                          
                                         </div>
                                         <div class="media-body">
+                                            <p>@recipedetailfeedback.FeedbackId.Count()</p>
                                             <a href="#"><h4>@recipedetailfeedback.AccUsername</h4></a>
                                             <p>@recipedetailfeedback.Content</p>
                                             <div class="date_rep">
-                                                <a href="#">@recipedetailfeedback.Created</a>
-                                               
+                                                <a href="#">@recipedetailfeedback.Created.ToString("dd/MM/yyyy")</a>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -105,11 +107,9 @@
                                 <div class="s_comment_inner">
                                     <form class="row contact_us_form" action="http://galaxyanalytics.net/demos/cake/theme/cake-html/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                                         <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                            <span class="label label-default">Nam vip 1111 </span>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
-                                        </div>
+                                        
                                         <div class="form-group col-md-12">
                                             <textarea class="form-control" name="message" id="message" rows="1" placeholder="Wrtie message"></textarea>
                                         </div>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                 </div>
-                @*<div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="right_sidebar_area">
                         <aside class="r_widget search_widget">
                             <div class="input-group">
@@ -201,7 +201,7 @@
                             </ul>
                         </aside>
                     </div>
-                </div>*@
+                </div>
             </div>
         </div>
 
