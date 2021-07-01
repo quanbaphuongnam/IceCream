@@ -386,11 +386,6 @@ namespace IceCream.Models
                     .HasMaxLength(50)
                     .HasColumnName("hashtag_id");
 
-                entity.HasOne(d => d.Book)
-                    .WithMany(p => p.SavourBooks)
-                    .HasForeignKey(d => d.BookId)
-                    .HasConstraintName("FK__savour_bo__book___403A8C7D");
-
                 entity.HasOne(d => d.Hashtag)
                     .WithMany(p => p.SavourBooks)
                     .HasForeignKey(d => d.HashtagId)

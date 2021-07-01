@@ -36,13 +36,13 @@
                             @if (@HttpContextAccessor.HttpContext.Session.GetString("username") != null)
                             {
                                 <li><a asp-controller="profile" asp-action="profile">@HttpContextAccessor.HttpContext.Session.GetString("username")</a></li>
-                                <li><a asp-controller="cart" asp-action="cart">Cart</a></li>
+                                <li><a asp-controller="cart" asp-action="cart">Cart (@HttpContextAccessor.HttpContext.Session.GetInt32("jsoncart"))</a></li>
                                 <li><a asp-controller="account" asp-action="logout">Log out</a></li>
                             }
                             else
                             {
                                 <li><a class="popup-with-zoom-anim" href="#test-login">Login</a></li>
-                                <li><a asp-controller="cart" asp-action="cart">Cart</a></li>
+                                <li><a asp-controller="cart" asp-action="index">Cart (@HttpContextAccessor.HttpContext.Session.GetInt32("jsoncart"))</a></li>
                             }
                         </ul>
                     </li>

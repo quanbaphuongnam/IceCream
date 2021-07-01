@@ -13,7 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 2 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
@@ -63,7 +63,7 @@ using Microsoft.AspNetCore.Http;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 5 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 5 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
   
     ViewData["Title"] = "RecipeDetail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -95,7 +95,7 @@ using Microsoft.AspNetCore.Http;
                     <div class=""main_blog_inner single_blog_inner"">
 ");
 #nullable restore
-#line 31 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 31 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                          foreach (var recipedetail in (IEnumerable<dynamic>)ViewBag.recipedetails)
                         {
 
@@ -138,7 +138,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
                                         <div class=""float-left"">
                                             <a href=""#"">");
 #nullable restore
-#line 44 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 44 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                                    Write(recipedetail.ForCreated.ToString("dd/MM/yyyy"));
 
 #line default
@@ -150,7 +150,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
                                             <ul class=""list_style"">
                                                 <li><a href=""#"">By :  ");
 #nullable restore
-#line 48 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 48 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                                                  Write(recipedetail.AccUsername);
 
 #line default
@@ -164,7 +164,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
                                     </div>
                                     <a href=""#""><h4>");
 #nullable restore
-#line 54 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 54 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                                Write(recipedetail.ForName);
 
 #line default
@@ -189,7 +189,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
 #nullable disable
             WriteLiteral("                    <div class=\"s_comment_list\">\r\n                       \r\n                        <h3 class=\"cm_title_br\">Comments </h3>\r\n                            <div class=\"s_comment_list_inner\">\r\n");
 #nullable restore
-#line 77 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 77 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                  foreach (var recipedetailfeedback in (IEnumerable<dynamic>)ViewBag.recipedetailfeedback)
                                 {
 
@@ -198,7 +198,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
 #nullable disable
             WriteLiteral("                                    <div class=\"media\">\r\n                                        <div class=\"d-flex\">\r\n");
 #nullable restore
-#line 81 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 81 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                              if (@recipedetailfeedback.AccAvatar == null)
                                             {
 
@@ -224,7 +224,7 @@ AddHtmlAttributeValue("", 1276, recipedetail.ForCover, 1276, 22, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
 #nullable restore
-#line 84 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 84 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                             }
                                             else
                                             {
@@ -260,7 +260,7 @@ AddHtmlAttributeValue("", 4915, recipedetailfeedback.AccAvatar, 4915, 31, false)
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
 #nullable restore
-#line 88 "C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
+#line 88 "C:\Users\HP\Desktop\IceCream\IceCream\Views\Recipe\RecipeDetail.cshtml"
                                             }
 
 #line default
