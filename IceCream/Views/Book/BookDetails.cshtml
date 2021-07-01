@@ -34,7 +34,7 @@
                         <label for="quantity">Quantity : @ViewBag.book.BookQuantity</label>
                         <input type="number" min="1" max="@ViewBag.book.BookQuantity" id="quantity" placeholder="1">
                     </div>
-                    <a class="pink_more" href="#">Add to Cart</a>
+                    <a class="pink_more" asp-controller="cart" asp-action="buy" asp-route-id="@ViewBag.book.BookId">Add to Cart</a>
                 </div>
             </div>
         </div>

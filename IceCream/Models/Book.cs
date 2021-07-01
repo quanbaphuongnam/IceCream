@@ -10,7 +10,6 @@ namespace IceCream.Models
         public Book()
         {
             InvoiceDetailAccounts = new HashSet<InvoiceDetailAccount>();
-            SavourBooks = new HashSet<SavourBook>();
         }
 
         public int BookId { get; set; }
@@ -25,6 +24,6 @@ namespace IceCream.Models
         public byte? BookStatus { get; set; }
 
         public virtual ICollection<InvoiceDetailAccount> InvoiceDetailAccounts { get; set; }
-        public virtual ICollection<SavourBook> SavourBooks { get; set; }
+
     }
 }
