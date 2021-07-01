@@ -42,6 +42,9 @@ namespace IceCream
             services.AddScoped<RecipeService, RecipeServiceImpl>();
             services.AddScoped<SavourService, SavourServiceImpl>();
             services.AddScoped<AccountService, AccountServiceImpl>();
+            services.AddScoped<QuanLyBookServices, QuanLyBookSercicesImpl>();
+            services.AddScoped<QuanLyRecipeServices, QuanLyRecipeServicesImpl>();
+            services.AddScoped<QuanLySavourServices, QuanLySavourServicesImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +63,8 @@ namespace IceCream
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseDefaultFiles();
+            app.UseDeveloperExceptionPage();
             app.UseRouting();
             app.UseSession();
             // who are you?  
