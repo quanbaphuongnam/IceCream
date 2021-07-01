@@ -14,6 +14,13 @@ namespace IceCream.Services
             db = _db;
         }
 
+        public FeedbackFormula CreateFeedbackFormula(FeedbackFormula fbFormula)
+        {
+            db.FeedbackFormulas.Add(fbFormula);
+            db.SaveChanges();
+            return fbFormula;
+        }
+
         public Formula CreateFormula(Formula formula)
         {
             db.Formulas.Add(formula);
@@ -28,15 +35,6 @@ namespace IceCream.Services
             return photoFormula;
         }
 
-        public List<Formula> FindAllFormula()
-        {
-            return db.Formulas.Where(f => f.ForStatus == 1).ToList();
-
-        }
-
-        public List<Formula> FindAllNewFormula()
-        {
-            return db.Formulas.OrderByDescending(f => f.ForId).Take(6).ToList();
-        }
+     
     }
 }

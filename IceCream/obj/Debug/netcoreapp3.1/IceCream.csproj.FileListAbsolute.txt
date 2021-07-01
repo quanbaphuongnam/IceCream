@@ -798,3 +798,4 @@ C:\Users\HP\Desktop\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win-x86\n
 C:\Users\HP\Desktop\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\HP\Desktop\IceCream\IceCream\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\HP\Desktop\IceCream\IceCream\obj\Debug\netcoreapp3.1\Razor\Views\Home\SignUpSuccess.cshtml.g.cs
+C:\Users\User\Source\Repos\IceCream\IceCream\IceCream\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll

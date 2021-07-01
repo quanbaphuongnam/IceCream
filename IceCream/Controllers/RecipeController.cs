@@ -51,9 +51,7 @@ namespace IceCream.Controllers
                                   ForCondition = f.ForCondition,
                                   ForStatus = f.ForStatus,
                                   ForCreated = f.ForCreated
-                                 
                                   //ConLai = (x.Soluong - y.Soluong)
-
                               };
 
             ViewBag.newrecipes = (from f in db.Formulas
@@ -70,9 +68,8 @@ namespace IceCream.Controllers
                                      ForCondition = f.ForCondition,
                                      ForStatus = f.ForStatus,
                                      ForCreated = f.ForCreated
-                                    
+                              
                                       //ConLai = (x.Soluong - y.Soluong)
-
                                   }).OrderByDescending(f => f.ForId).Take(6);
             return View("recipe");
         }
@@ -174,6 +171,16 @@ namespace IceCream.Controllers
             
             recipeService.CreateFormula(formula);
             recipeService.CreateFormulaListPhoTo(photoFormula);
+            return RedirectToAction("recipe");
+        }
+
+        [HttpPost]
+        [Route("feedbackrecipe")]
+        public IActionResult FeedbackRecipe(FeedbackFormula fbFormula)
+        {
+            fbFormula.Created = DateTime.Now;
+            recipeService.CreateFeedbackFormula(fbFormula);
+
             return RedirectToAction("recipe");
         }
     }
