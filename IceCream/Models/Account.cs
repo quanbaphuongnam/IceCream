@@ -10,7 +10,6 @@ namespace IceCream.Models
         public Account()
         {
             AccountPayments = new HashSet<AccountPayment>();
-            FeedbackBooks = new HashSet<FeedbackBook>();
             FeedbackFormulas = new HashSet<FeedbackFormula>();
             Formulas = new HashSet<Formula>();
             InvoiceAccounts = new HashSet<InvoiceAccount>();
@@ -32,7 +31,6 @@ namespace IceCream.Models
         public byte? AccStatus { get; set; }
 
         public virtual ICollection<AccountPayment> AccountPayments { get; set; }
-        public virtual ICollection<FeedbackBook> FeedbackBooks { get; set; }
         public virtual ICollection<FeedbackFormula> FeedbackFormulas { get; set; }
         public virtual ICollection<Formula> Formulas { get; set; }
         public virtual ICollection<InvoiceAccount> InvoiceAccounts { get; set; }

@@ -10,7 +10,7 @@ namespace IceCream.Services
     {
         List<Formula> FindAllFormula();
         List<Formula> FindAllNewFormula();
-
-        List<Formula> Search(string keyword);
+        Formula CreateFormula(Formula formula);
+        PhotoFormula CreateFormulaListPhoTo(PhotoFormula photoFormula);
     }
 }

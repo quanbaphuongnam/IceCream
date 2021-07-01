@@ -30,9 +30,12 @@ namespace IceCream.Controllers
         [Route("")]
         public IActionResult Index()
         {
+            ViewBag.postUrl = configuration["PayPal:PostUrl"];
+            ViewBag.business = configuration["PayPal:Business"];
+            ViewBag.returnUrl = configuration["PayPal:ReturnUrl"];
             return View();
         }
-
+      
         [HttpGet]
         [Route("add")]
         public IActionResult Add()
@@ -43,6 +46,7 @@ namespace IceCream.Controllers
         [Route("add")]
         public IActionResult Add(Account acc)
         {
+           
             acc.AccPassword = BCrypt.Net.BCrypt.HashString(acc.AccPassword);
             account.Create(acc);
             return RedirectToAction("index", "home", new Account());

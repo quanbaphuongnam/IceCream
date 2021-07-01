@@ -1,21 +1,18 @@
 ﻿// Check for valid email syntax
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
+
 
 function closeForm() {
     document.contactform.name.value = '';
-    document.contactform.email.value = '';
+
     document.contactform.message.value = '';
 
-    $('.email').removeClass('typing');
+
     $('.name').removeClass('typing');
     $('.message').removeClass('typing');
 
     $('.cd-popup').removeClass('is-visible');
     $('.notification').addClass('is-visible');
-    $('#notification-text').html("Thanks for contacting us!");
+    $('#notification-text').html("Thank you for sending a new recipe for us!");
 }
 
 $(document).ready(function ($) {
@@ -26,15 +23,13 @@ $(document).ready(function ($) {
     $('#contact').on('click', function (event) {
         event.preventDefault();
 
-        $('#contactblurb').html('Questions, suggestions, and general comments are all welcome!');
+        $('#contactblurb').html('Thank you for sending a new recipe for us, we will review your formula as soon as possible!');
         $('.contact').addClass('is-visible');
 
         if ($('#name').val().length != 0) {
             $('.name').addClass('typing');
         }
-        if ($('#email').val().length != 0) {
-            $('.email').addClass('typing');
-        }
+
         if ($('#message').val().length != 0) {
             $('.message').addClass('typing');
         }
@@ -64,12 +59,7 @@ $(document).ready(function ($) {
             $('.name').removeClass('typing');
         }
     });
-    $('#email').keyup(function () {
-        $('.email').addClass('typing');
-        if ($(this).val().length == 0) {
-            $('.email').removeClass('typing');
-        }
-    });
+
     $('#message').keyup(function () {
         $('.message').addClass('typing');
         if ($(this).val().length == 0) {
@@ -82,12 +72,12 @@ $(document).ready(function ($) {
     /* ----------------- */
     $('#contactform').submit(function () {
         var name = $('#name').val();
-        var email = $('#email').val();
+
         var message = $('#message').val();
         var human = $('#human:checked').val();
 
         if (human) {
-            if (validateEmail(email)) {
+            if (message) {
                 if (name) {
                     if (message) {
 
@@ -122,15 +112,15 @@ $(document).ready(function ($) {
                         closeForm();
 
                     } else {
-                        $('#notification-text').html("<strong>Please let us know what you're thinking!</strong>");
+                        $('#notification-text').html("<strong>Please let us know what your formula!</strong>");
                         $('.notification').addClass('is-visible');
                     }
                 } else {
-                    $('#notification-text').html('<strong>Please provide a name.</strong>');
+                    $('#notification-text').html('<strong>Please complete your post.</strong>');
                     $('.notification').addClass('is-visible');
                 }
             } else {
-                $('#notification-text').html('<strong>Please use a valid email address.</strong>');
+                $('#notification-text').html('<strong>Please complete your post</strong>');
                 $('.notification').addClass('is-visible');
             }
         } else {
