@@ -37,7 +37,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row product_item_inner">
+
                     @foreach (var newrecipe in ViewBag.newrecipes)
                     {
                         <div class="col-lg-4 col-md-4 col-6">
@@ -51,7 +53,7 @@
                                     {
                                         <h4>@newrecipe.ForCondition</h4>
                                     }
-                                   
+
                                     <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
 
                                     <h3>@newrecipe.ForName</h3>
@@ -60,6 +62,7 @@
                             </div>
                         </div>
                     }
+
                     @foreach (var recipe in ViewBag.recipes)
                     {
                         <div class="col-lg-4 col-md-4 col-6">
@@ -81,7 +84,25 @@
                                 </div>
                             </div>
                         </div>
-                    }
+                    } @*@foreach (var fomula in ViewBag.fomulas)
+                    {
+                        <div class="col-lg-4 col-md-4 col-6">
+                            <div class="cake_feature_item">
+                                <div class="cake_img">
+                                    <img src="~/img/recipe/@fomula.ForCover" width="270" height="226" alt="">
+
+                                </div>
+                                <div class="cake_text">
+
+                                    <h4>@fomula.ForCondition</h4>
+
+                                    <br /><p style="text-align:right">by: nam Vjp pro&ensp; </p>
+                                    <h3>@fomula.ForName</h3>
+                                    <a class="custom-btn btn-8" asp-controller="recipe" asp-action="recipedetail">See now</a>
+                                </div>
+                            </div>
+                        </div>
+                    }*@
 
 
                 </div>
@@ -106,11 +127,14 @@
             <div class="col-lg-3">
                 <div class="product_left_sidebar">
                     <aside class="left_sidebar search_widget">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter Search Keywords">
-                            <div class="input-group-append">
-                                <button class="btn" type="button"><i class="icon icon-Search"></i></button>
-                            </div>
+                        <div class="input-group" >
+                            <form asp-controller="recipe" asp-action="search" method="get">
+                                <input type="text" class="form-control" name="keyword" value="@ViewBag.keyword" placeholder="Enter Search Keywords">
+                                <div class="input-group-append">
+                                    <button class="btn" type="button"><i class="icon icon-Search"></i></button>
+                                    <button type="submit" value="search" ></button>
+                                </div>
+                            </form>
                         </div>
                     </aside>
                     <aside class="left_sidebar p_catgories_widget">

@@ -23,5 +23,11 @@ namespace IceCream.Services
         {
             return db.Formulas.OrderByDescending(f => f.ForId).Take(6).ToList();
         }
+
+        public List<Formula> Search(string keyword)
+        {
+            return db.Formulas.Where(a => a.ForName.ToLower().Contains(keyword.ToLower())).ToList(); 
+
+        }
     }
 }

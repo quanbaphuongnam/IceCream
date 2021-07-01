@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace IceCream.Services
 {
-    public interface RecipeService
+     public interface QuanLyBookServices
     {
-        List<Formula> FindAllFormula();
-        List<Formula> FindAllNewFormula();
+        List<Book> FindAllBook();
+        public bool Update(Book book);
 
-        List<Formula> Search(string keyword);
     }
 }

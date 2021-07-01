@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IceCream.Services;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,10 @@ namespace IceCream.Controllers
 {
     public class SavourController : Controller
     {
+       
         public IActionResult Index()
         {
+            
             return View();
         }
     }

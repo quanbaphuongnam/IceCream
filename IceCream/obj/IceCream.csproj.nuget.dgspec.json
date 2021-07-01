@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\IceCream\\IceCream\\IceCream.csproj": {}
+    "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\IceCream\\IceCream\\IceCream.csproj": {
+    "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\IceCream\\IceCream\\IceCream.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj",
         "projectName": "IceCream",
-        "projectPath": "C:\\Users\\HP\\Desktop\\IceCream\\IceCream\\IceCream.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\IceCream\\IceCream\\obj\\",
+        "projectPath": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\IceCream.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\OneDrive\\Máy tính\\Ice Cream\\IceCream\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,12 +105,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -119,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
